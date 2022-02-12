@@ -41,7 +41,7 @@ io.on("connection", (socket) => {
     socket.join(payload.id);
   });
 });
-
-server.listen(4000, () => {
-  console.log("server up at port 4000");
+const PORT = process.env.PORT || 4000;
+server.listen(PORT, () => {
+  console.log("server up at port ", PORT);
 });
